@@ -15,3 +15,9 @@ docs/
 
 # History files
 .history
+
+# Assets 
+assets/
+
+# Broadcast files
+broadcast/

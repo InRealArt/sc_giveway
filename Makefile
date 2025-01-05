@@ -24,3 +24,17 @@ upload-metadata:
 		-H "pinata_secret_api_key: $(PINATA_SECRET_KEY)" \
 		-d @$(METADATA_DIR)/$(TOKEN_ID).json \
 		https://api.pinata.cloud/pinning/pinJSONToIPFS
+
+deployIraGiveway:
+	@echo "Deploying the IRA_Giveway contract..."
+	forge script script/Deploy_IRA_Giveway.s.sol:Deploy_IRA_Giveway --rpc-url $(RPC_URL) --private-key $(PRIVATE_KEY) --broadcast --legacy
+
+mint:
+	@echo "Minting NFT..."
+	@cast send $(CONTRACT_ADDRESS) \
+		"safeMint(address,string)" \
+		$(TO_ADDRESS) \
+		"$(TOKEN_URI)" \
+		--rpc-url $(RPC_URL) \
+		--private-key $(PRIVATE_KEY) \
+		--legacy

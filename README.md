@@ -1,66 +1,37 @@
-## Foundry
+## InRealArt giveway smart contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**This is the smart contrat for mintinh our special NFT given for the giveway during Christmas 2024**
 
-Foundry consists of:
+## Makefile Scripts
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
+### Upload images on IPFS
 
 ```shell
-$ forge build
+$ make upload-image IMAGE=mon-image.jpg
 ```
 
-### Test
+The image must be in the directory _/assets/images_
+
+### Upload images on IPFS
 
 ```shell
-$ forge test
+$ make upload-metadata TOKEN_ID=1
 ```
 
-### Format
+### Mint a NFT
 
 ```shell
-$ forge fmt
+$ make mint CONTRACT_ADDRESS=0x123 TO_ADDRESS=0x456 TOKEN_URI="ipfs://QmVotreHashMetadata"
 ```
 
-### Gas Snapshots
+The metadata file must be in the directory _/assets/metadata_
 
-```shell
-$ forge snapshot
-```
+## Smart contract addresses
 
-### Anvil
+This is the last deployed SC
 
-```shell
-$ anvil
-```
+### Testnet
 
-### Deploy
+0x061b0604e6A0c6CDAe32Fd5de3Cdfb93F8Cb12bc
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+### Mainnet
