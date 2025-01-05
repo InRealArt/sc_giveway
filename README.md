@@ -30,7 +30,7 @@ The metadata file must be in the directory _/assets/metadata_
 
 This is the last deployed SC
 
-### Testnet
+### Testnet
 
 0x061b0604e6A0c6CDAe32Fd5de3Cdfb93F8Cb12bc
 
