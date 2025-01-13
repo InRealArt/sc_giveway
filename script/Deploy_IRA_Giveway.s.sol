@@ -9,7 +9,8 @@ contract Deploy_IRA_Giveway is Script {
   function setUp() public {}
 
   function run() public {
-    vm.startBroadcast();
+    uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+    vm.startBroadcast(deployerPrivateKey);
     address initialOwner = 0x9428265E876b57BAAE905315D1A38f3F3dB79305;
     IRA_Giveway instance = new IRA_Giveway(initialOwner);
     console.log("Contract deployed to %s", address(instance));
