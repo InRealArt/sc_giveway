@@ -55,5 +55,6 @@ catapulta script script/Deploy_IRA_Giveway.s.sol:Deploy_IRA_Giveway --network po
  - Triskelion : 0xd703eCa4667416F9F3286C2A10cF02cB51A49720 (Ronan Martin)
  - Mlem | IRA : 0xA0F63B3ffdFC399f138E846268A9f144A076251B (Ronan Martin)
  - Shin 🇻🇳 : 0x53bf81324eB00e528eFf98867455D457CE4143Ed (Monique Laville)
+ - @Astro5 : 0xb52F0c6911350a363ac4604Bd3320cCbA892D5e0 (Marc Pfelzer 1)
 
 
